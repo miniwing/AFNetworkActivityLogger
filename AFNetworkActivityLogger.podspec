@@ -30,7 +30,9 @@ Pod::Spec.new do |s|
   s.tvos.pod_target_xcconfig        = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.idea.AFNetworkActivityLogger' }
 
   s.pod_target_xcconfig             = {
-    'GCC_PREPROCESSOR_DEFINITIONS'      => [ ' MODULE=\"AFNetworkActivityLogger\" ' ]
+    'GCC_PREPROCESSOR_DEFINITIONS'      => [
+                                              ' MODULE=\"AFNetworkActivityLogger\" '
+                                           ]
                                       }
 
   s.dependency 'AFNetworking/NSURLSession'
