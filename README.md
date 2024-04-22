@@ -12,7 +12,7 @@
 
 ## Usage
 
-Add the following code to `AppDelegate.m -application:didFinishLaunchingWithOptions:`:
+Add the following code to `APPDelegate.m -application:didFinishLaunchingWithOptions:`:
 
 ``` objective-c
 [[AFNetworkActivityLogger sharedLogger] startLogging];

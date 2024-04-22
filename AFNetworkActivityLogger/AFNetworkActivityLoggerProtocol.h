@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, AFHTTPRequestLoggerLevel) {
 /**
  `AFNetworkActivityLoggerProtocol` declares the interface to log requests and responses made by AFNetworking, with an adjustable level of detail.
 
- Objects that conform to `AFNetworkActivityLoggerProtocol` should be added to the shared instance of `AFNetworkActivityLogger`. Applications should then enable the shared instance of `AFNetworkActivityLogger` in `AppDelegate -application:didFinishLaunchingWithOptions:`:
+ Objects that conform to `AFNetworkActivityLoggerProtocol` should be added to the shared instance of `AFNetworkActivityLogger`. Applications should then enable the shared instance of `AFNetworkActivityLogger` in `APPDelegate -application:didFinishLaunchingWithOptions:`:
 
  [[AFNetworkActivityLogger sharedLogger] startLogging];
  

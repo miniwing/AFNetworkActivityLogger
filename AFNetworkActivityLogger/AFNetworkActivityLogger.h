@@ -26,7 +26,7 @@
 /**
  `AFNetworkActivityLogger` logs requests and responses made by AFNetworking, with an adjustable level of detail.
  
- Applications should enable the shared instance of `AFNetworkActivityLogger` in `AppDelegate -application:didFinishLaunchingWithOptions:`:
+ Applications should enable the shared instance of `AFNetworkActivityLogger` in `APPDelegate -application:didFinishLaunchingWithOptions:`:
 
         [[AFNetworkActivityLogger sharedLogger] startLogging];
  
