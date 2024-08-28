@@ -11,16 +11,15 @@ Pod::Spec.new do |s|
 
   s.requires_arc      = true
   
-  s.tvos.deployment_target          = '12.0'
-  s.ios.deployment_target           = '12.0'
-
-  s.osx.deployment_target           = '10.15'
-  s.watchos.deployment_target       = '5.0'
+  s.ios.deployment_target           = ENV['ios.deployment_target']
+  s.watchos.deployment_target       = ENV['watchos.deployment_target']
+  s.tvos.deployment_target          = ENV['tvos.deployment_target']
+  s.osx.deployment_target           = ENV['osx.deployment_target']
 
   s.ios.pod_target_xcconfig         = {
                                         'PRODUCT_BUNDLE_IDENTIFIER' => 'com.idea.AFNetworkActivityLogger',
-                                        'ENABLE_BITCODE'            => 'NO',
-                                        'SWIFT_VERSION'             => '5.0',
+                                        'ENABLE_BITCODE'            => ENV['ENABLE_BITCODE'],
+                                        'SWIFT_VERSION'             => ENV['SWIFT_VERSION'],
                                         'EMBEDDED_CONTENT_CONTAINS_SWIFT'       => 'NO',
                                         'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
                                         'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
