@@ -158,14 +158,17 @@ Pod::Spec.new do |s|
 
 /******************************************************************************************************/
 
-#if (__has_include(<YYKit/YYKit.h>))
+#if (__has_include(<YYKit/YYKit-umbrella.h>))
 #  import <YYKit/YYKit.h>
-#elif (__has_include("YYKit/YYKit.h"))
+#     define YY_KIT                                                        (1)
+#elif (__has_include("YYKit/YYKit-umbrella.h"))
 #  import "YYKit/YYKit.h"
-// #elif (__has_include("YYKit.h"))
-// #  import "YYKit.h"
+#     define YY_KIT                                                        (1)
+#elif (__has_include("YYKit-umbrella.h"))
+#  import "YYKit.h"
+#     define YY_KIT                                                        (1)
 #else /* YY_KIT */
-
+#     define YY_KIT                                                        (0)
 #  ifndef weakify
 #     if __has_feature(objc_arc)
 #        define weakify( x )                                               \\
@@ -197,7 +200,6 @@ Pod::Spec.new do |s|
             _Pragma("clang diagnostic pop")
 #     endif
 #  endif /* !strongify */
-
 #endif
 
 /******************************************************************************************************/
