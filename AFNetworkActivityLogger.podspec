@@ -116,13 +116,10 @@ Pod::Spec.new do |s|
 #import <objc/message.h>
 #import <objc/runtime.h>
 
-#ifdef __OBJC__
-#  import <UIKit/UIKit.h>
-#  import <Foundation/Foundation.h>
-#  import <QuartzCore/QuartzCore.h>
-#  import <QuartzCore/CAAnimation.h>
-#  import <MessageUI/MessageUI.h>
-#endif /* __OBJC__ */
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <QuartzCore/CAAnimation.h>
 
 /******************************************************************************************************/
 
